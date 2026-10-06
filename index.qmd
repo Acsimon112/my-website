@@ -1,0 +1,16 @@
+---
+title: "my-website"
+---
+
+Cool uses for quarto:
+
+- Sharing notes with dnd players
+
+- <https://ibis-project.org/>
+
+  - Really neat way to show off a library, I like the diagrams and little interactable tabs.
+
+  - Could use this to display implementations for things in different languages..?
+
+```{r}
+```

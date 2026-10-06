@@ -1,0 +1,9 @@
+---
+title: "About"
+---
+
+I like to draw funny animal people doing things.
+
+```{r}
+
+```

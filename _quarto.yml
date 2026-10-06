@@ -1,0 +1,30 @@
+project:
+  type: website
+
+website:
+  title: "Mr. Fahrenheit's internet corner"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - about.qmd
+  sidebar:
+    style: "docked"
+    search: true
+    contents:
+      - index.qmd
+      - about.qmd
+      - section: "Assignments"
+        contents:
+          - ae03-gerrymander.qmd
+
+format:
+  html:
+    theme:
+      - superhero
+      - brand
+    css: styles.css
+    toc: true
+
+editor: visual
+

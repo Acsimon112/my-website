@@ -1,0 +1,96 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "my-website",
+    "section": "",
+    "text": "Cool uses for quarto:\n\nSharing notes with dnd players\nhttps://ibis-project.org/\n\nReally neat way to show off a library, I like the diagrams and little interactable tabs.\nCould use this to display implementations for things in different languages..?",
+    "crumbs": [
+      "Home",
+      "my-website"
+    ]
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "I like to draw funny animal people doing things.",
+    "crumbs": [
+      "Home",
+      "About"
+    ]
+  },
+  {
+    "objectID": "ae03-gerrymander.html",
+    "href": "ae03-gerrymander.html",
+    "title": "AE03 - Exploring gerrymandring",
+    "section": "",
+    "text": "Load the tidyverse, usdata, and sjPlot packages, and get the gerrymander data out of the usdata package. View the data using glimpse.\n\nlibrary(tidyverse)\nlibrary(usdata)\nlibrary(sjPlot)\nlibrary(gtsummary)\n\ngerrymander &lt;- usdata::gerrymander\nglimpse(gerrymander)\n\nRows: 435\nColumns: 12\n$ district   &lt;chr&gt; \"AK-AL\", \"AL-01\", \"AL-02\", \"AL-03\", \"AL-04\", \"AL-05\", \"AL-0…\n$ last_name  &lt;chr&gt; \"Young\", \"Byrne\", \"Roby\", \"Rogers\", \"Aderholt\", \"Brooks\", \"…\n$ first_name &lt;chr&gt; \"Don\", \"Bradley\", \"Martha\", \"Mike D.\", \"Rob\", \"Mo\", \"Gary\",…\n$ party16    &lt;chr&gt; \"R\", \"R\", \"R\", \"R\", \"R\", \"R\", \"R\", \"D\", \"R\", \"R\", \"R\", \"R\",…\n$ clinton16  &lt;dbl&gt; 37.6, 34.1, 33.0, 32.3, 17.4, 31.3, 26.1, 69.8, 30.2, 41.7,…\n$ trump16    &lt;dbl&gt; 52.8, 63.5, 64.9, 65.3, 80.4, 64.7, 70.8, 28.6, 65.0, 52.4,…\n$ dem16      &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0,…\n$ state      &lt;chr&gt; \"AK\", \"AL\", \"AL\", \"AL\", \"AL\", \"AL\", \"AL\", \"AL\", \"AR\", \"AR\",…\n$ party18    &lt;chr&gt; \"R\", \"R\", \"R\", \"R\", \"R\", \"R\", \"R\", \"D\", \"R\", \"R\", \"R\", \"R\",…\n$ dem18      &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 0,…\n$ flip18     &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0,…\n$ gerry      &lt;fct&gt; mid, high, high, high, high, high, high, high, mid, mid, mi…",
+    "crumbs": [
+      "Home",
+      "Assignments",
+      "AE03 - Exploring gerrymandring"
+    ]
+  },
+  {
+    "objectID": "ae03-gerrymander.html#getting-started",
+    "href": "ae03-gerrymander.html#getting-started",
+    "title": "AE03 - Exploring gerrymandring",
+    "section": "",
+    "text": "Load the tidyverse, usdata, and sjPlot packages, and get the gerrymander data out of the usdata package. View the data using glimpse.\n\nlibrary(tidyverse)\nlibrary(usdata)\nlibrary(sjPlot)\nlibrary(gtsummary)\n\ngerrymander &lt;- usdata::gerrymander\nglimpse(gerrymander)\n\nRows: 435\nColumns: 12\n$ district   &lt;chr&gt; \"AK-AL\", \"AL-01\", \"AL-02\", \"AL-03\", \"AL-04\", \"AL-05\", \"AL-0…\n$ last_name  &lt;chr&gt; \"Young\", \"Byrne\", \"Roby\", \"Rogers\", \"Aderholt\", \"Brooks\", \"…\n$ first_name &lt;chr&gt; \"Don\", \"Bradley\", \"Martha\", \"Mike D.\", \"Rob\", \"Mo\", \"Gary\",…\n$ party16    &lt;chr&gt; \"R\", \"R\", \"R\", \"R\", \"R\", \"R\", \"R\", \"D\", \"R\", \"R\", \"R\", \"R\",…\n$ clinton16  &lt;dbl&gt; 37.6, 34.1, 33.0, 32.3, 17.4, 31.3, 26.1, 69.8, 30.2, 41.7,…\n$ trump16    &lt;dbl&gt; 52.8, 63.5, 64.9, 65.3, 80.4, 64.7, 70.8, 28.6, 65.0, 52.4,…\n$ dem16      &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 1, 0,…\n$ state      &lt;chr&gt; \"AK\", \"AL\", \"AL\", \"AL\", \"AL\", \"AL\", \"AL\", \"AL\", \"AR\", \"AR\",…\n$ party18    &lt;chr&gt; \"R\", \"R\", \"R\", \"R\", \"R\", \"R\", \"R\", \"D\", \"R\", \"R\", \"R\", \"R\",…\n$ dem18      &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 1, 0,…\n$ flip18     &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0,…\n$ gerry      &lt;fct&gt; mid, high, high, high, high, high, high, high, mid, mid, mi…",
+    "crumbs": [
+      "Home",
+      "Assignments",
+      "AE03 - Exploring gerrymandring"
+    ]
+  },
+  {
+    "objectID": "ae03-gerrymander.html#congressional-districts-per-state",
+    "href": "ae03-gerrymander.html#congressional-districts-per-state",
+    "title": "AE03 - Exploring gerrymandring",
+    "section": "1. Congressional districts per state",
+    "text": "1. Congressional districts per state\nWhich state has the most congressional districts? The least? How many congressional districts are there in this state? Use functions such as table, tbl_summary or count.\n\ngerrymander %&gt;%\n  count(state) %&gt;%\n  arrange(desc(n))\n\n# A tibble: 50 × 2\n   state     n\n   &lt;chr&gt; &lt;int&gt;\n 1 CA       53\n 2 TX       36\n 3 FL       27\n 4 NY       27\n 5 IL       18\n 6 PA       18\n 7 OH       16\n 8 GA       14\n 9 MI       14\n10 NC       13\n# ℹ 40 more rows",
+    "crumbs": [
+      "Home",
+      "Assignments",
+      "AE03 - Exploring gerrymandring"
+    ]
+  },
+  {
+    "objectID": "ae03-gerrymander.html#districts-at-the-tails",
+    "href": "ae03-gerrymander.html#districts-at-the-tails",
+    "title": "AE03 - Exploring gerrymandring",
+    "section": "2. Districts at the tails",
+    "text": "2. Districts at the tails\nMake side-by-side box plots of percent of vote received by Trump in the 2016 Presidential Election by prevalence of gerrymandering. Identify any Congressional Districts that are potential outliers — points that fall well outside the whiskers of their box, meaning that district’s Trump vote share was unusually high or low compared to other districts with the same gerrymandering prevalence. What information can you share about them?\nAs we can see here, the two most prevalent outliers were present in the “low” category, in NY-13 & NY-15 which both represent Manhattan and the Bronx respectively.\n\ngerrymander %&gt;%\n  group_by(district) %&gt;%\n  filter(trump16 &lt;= 20, gerry == \"low\" ) %&gt;%\n  select(district, trump16, gerry)\n\n# A tibble: 10 × 3\n# Groups:   district [10]\n   district trump16 gerry\n   &lt;chr&gt;      &lt;dbl&gt; &lt;fct&gt;\n 1 MN-05       18.5 low  \n 2 NY-05       12.7 low  \n 3 NY-07       10.4 low  \n 4 NY-08       13.5 low  \n 5 NY-09       14.4 low  \n 6 NY-10       18.8 low  \n 7 NY-12       13.5 low  \n 8 NY-13        5.4 low  \n 9 NY-14       19.8 low  \n10 NY-15        4.9 low  \n\nggplot(\n  gerrymander,\n  aes(x = trump16, y = gerry)) +\n    geom_boxplot()",
+    "crumbs": [
+      "Home",
+      "Assignments",
+      "AE03 - Exploring gerrymandring"
+    ]
+  },
+  {
+    "objectID": "ae03-gerrymander.html#gerrymandering-and-flipping",
+    "href": "ae03-gerrymander.html#gerrymandering-and-flipping",
+    "title": "AE03 - Exploring gerrymandring",
+    "section": "3. Gerrymandering and flipping",
+    "text": "3. Gerrymandering and flipping\nThis relationship can be looked at from two directions — does gerrymandering predict a 2018 flip, and does a 2018 flip predict gerrymandering? Support both with a visualization and summary statistics. The plot answers “what does the mix look like within each group?”; the table gives the exact proportions the plot is showing. Write 1-2 bullet points about what you noticed from each plot. Use specific numbers in your answer.\nDirection 1: Is a Congressional District more likely to have high prevalence of gerrymandering if a Democrat was able to flip the seat in the 2018 election? To compare the breakdown of gerrymandering prevalence within each flipped group, make sure flip18 is on the x axis and that your percents add up to 100% within each category.\n\nggplot(\n  gerrymander,\n  aes(x = flip18, fill = gerry)) +\n    geom_bar(position = \"fill\")\n\n\n\n\n\n\n\n\n\ngerrymander %&gt;%\n  filter(flip18 == 1) %&gt;%\n  count(gerry)\n\n# A tibble: 3 × 2\n  gerry     n\n  &lt;fct&gt; &lt;int&gt;\n1 low       8\n2 mid      25\n3 high      5\n\n\n\nWhat we can glean from this specific plot is that it’s more likely that a district that flipped in 2018 has a low prevalence of gerrymandering. In the list of flipped districts, a district is 1.6x more likely to have low gerrymandering.\n\nDirection 2: Is a Congressional District more likely to be flipped to a Democratic seat if it has high prevalence of gerrymandering, or low prevalence? Same two variables, just flipped — so now gerry is on the x-axis. Again, make sure your percents add up to 100% within each category.\n\nggplot(\n  gerrymander,\n  aes(x = gerry, fill = as.factor(flip18))) +\n    geom_bar(position = \"fill\")\n\n\n\n\n\n\n\n\n\ngerrymander %&gt;%\n  filter(gerry == \"high\") %&gt;%\n  count(flip18)\n\n# A tibble: 2 × 2\n  flip18     n\n   &lt;dbl&gt; &lt;int&gt;\n1      0    98\n2      1     5\n\n\n\ngerrymander %&gt;%\n  filter(gerry == \"low\") %&gt;%\n  count(flip18)\n\n# A tibble: 3 × 2\n  flip18     n\n   &lt;dbl&gt; &lt;int&gt;\n1     -1     2\n2      0    52\n3      1     8\n\n\n\nFrom what we can see in this graph, a higher percentage of seats are flipped towards democrats in low gerrymandered districts when compared to high gerrymandered districts. Interestingly enough, we can also see flips in the opposite direction in low gerrymandered areas, with 2 “-1” observations.",
+    "crumbs": [
+      "Home",
+      "Assignments",
+      "AE03 - Exploring gerrymandring"
+    ]
+  },
+  {
+    "objectID": "ae03-gerrymander.html#gerrymandering-and-presidential-margin",
+    "href": "ae03-gerrymander.html#gerrymandering-and-presidential-margin",
+    "title": "AE03 - Exploring gerrymandring",
+    "section": "4. Gerrymandering and presidential margin",
+    "text": "4. Gerrymandering and presidential margin\nUsing mutate, create a new variable, margin16, measuring how many percentage points Clinton won or lost by in each district (clinton16 - trump16). Does gerrymandering prevalence relate to how lopsided the 2016 presidential race was in that district? Report the min, mean, and max margin by gerry level, then visualize the full distribution with a violin + boxplot combo. Describe the shape, center, and spread of each group.\n\ngerrymander %&gt;%\n  mutate(margin16 = clinton16 -  trump16) %&gt;%\n  group_by(gerry) %&gt;%\n  summarize(mean_margin = mean(margin16),\n            max_margin = max(margin16),\n            min_margin = min(margin16))\n\n# A tibble: 3 × 4\n  gerry mean_margin max_margin min_margin\n  &lt;fct&gt;       &lt;dbl&gt;      &lt;dbl&gt;      &lt;dbl&gt;\n1 low          6.32       88.9      -54.9\n2 mid          3.25       82.8      -63  \n3 high         1.34       78.2      -63  \n\n\n\ngerrymander %&gt;%\n  mutate(margin16 = clinton16 -  trump16) %&gt;%\n  ggplot(aes(x = gerry, y = margin16)) +\n  geom_violin() +\n  geom_boxplot()\n\n\n\n\n\n\n\n\n\nnotably, each median value in the three levels of gerry show that the margin was either 0 or below. The median is more in favor for trump the more gerrymandered the district is in this situation, this is reflected with the density curves of the violin graphs being most pronounced below the 0 line.",
+    "crumbs": [
+      "Home",
+      "Assignments",
+      "AE03 - Exploring gerrymandring"
+    ]
+  }
+]
